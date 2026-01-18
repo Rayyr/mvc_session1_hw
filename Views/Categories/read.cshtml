@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>Read Action for Categories</h1>
+	<ul>
+		@foreach (var category in Model)
+		{
+			<li>@category.id - @category.name</li>
+		}
+	 
+	</ul>
+
+</body>
+</html>
