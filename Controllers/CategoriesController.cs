@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using mvc_trial.Data;
+using mvc_trial.Models;
 
 namespace mvc_trial.Controllers
 {
 
     public class CategoriesController : Controller
     {
+        //database connection
         ApplicationDbContext context = new ApplicationDbContext();
 
         //read action
@@ -21,6 +23,22 @@ namespace mvc_trial.Controllers
         {
             var category = context.categories.Find(id);
             return View("./Views/Categories/getDetails.cshtml", category);
+        }
+
+
+        //create new category ( add new one ) 
+        public ViewResult createCategory()
+        {
+            return View("./Views/Categories/create.cshtml");
+        }
+
+
+        //store category
+        public void store(Category created_category)
+        {
+            context.categories.Add(created_category);
+            context.SaveChanges();
+            return;
         }
     }
 }
