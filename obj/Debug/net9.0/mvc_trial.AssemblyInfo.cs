@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mvc_trial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d0bc29768931c509f0bfce1c3da8de055fbeb13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a18ee2d7716a4edcbac90e04b0c0f4a22bcf611")]
 [assembly: System.Reflection.AssemblyProductAttribute("mvc_trial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mvc_trial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

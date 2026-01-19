@@ -2,18 +2,17 @@
 <html>
 <body>
 
-	<h1>Read Action for Categories</h1>
+	<h1>Read(GET) Action</h1>
 	<ul>
 		@foreach (var category in Model)
 		{
 			<li>@category.id - @category.name</li>
-			<a href="/Categories/deleteCategory/@category.id">delete</a>
-			<a href="/Categories/getDetails/@category.id">details</a>
-
-			
+			<a class="btn btn-warning" href="/Categories/deleteCategory/@category.id">delete</a>
+			<a class="btn btn-secondary" href="/Categories/getDetails/@category.id">details</a>
+			<a class="btn btn-info" href="/Categories/updateCategory/@category.id">update</a>
 		}
 	 
 	</ul>
-	<a href="/Categories/createCategory">create new category</a>
+	<a class="btn btn-primary"  href="/Categories/createCategory">create new category</a>
 </body>
 </html>

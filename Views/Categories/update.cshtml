@@ -1,0 +1,18 @@
+﻿@model Category
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>UPDATE Action</h1>
+	<form method="post" action="/Categories/storeUpdate">
+		<input type="text" name="name" value="@Model.name" placeholder="category name" />
+		<input type="text" name="description" value="@Model.description" placeholder="category description" />
+		<input type="number" name="id" value="@Model.id" hidden />
+
+		<input type="submit" />
+	</form>
+</body>
+</html>

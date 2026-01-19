@@ -52,5 +52,31 @@ namespace mvc_trial.Controllers
             //in case after deletion i need to get all categories ( home page ) 
             return RedirectToAction("getAll");
         }
+
+
+        //update specific category based to the passed if via the URL
+        public ViewResult updateCategory(int id)
+        {
+            var category = context.categories.Find(id);
+            return View("./Views/Categories/update.cshtml",category);
+        }
+
+        //
+        public RedirectToActionResult storeUpdate(Category category_new)
+        {
+            var category_old = context.categories.Find(category_new.id);
+            category_old.name = category_new.name;
+            category_old.description = category_new.description;
+            context.SaveChanges();
+
+            /*
+            //or directlly 
+            
+            context.categories.Update(category_new);
+            context.SaveChanges(); 
+            */
+            return RedirectToAction("getAll");
+
+        }
     }
 }
