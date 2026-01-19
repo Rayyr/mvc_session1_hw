@@ -34,11 +34,23 @@ namespace mvc_trial.Controllers
 
 
         //store category
-        public void store(Category created_category)
+        public RedirectToActionResult store(Category created_category)
         {
             context.categories.Add(created_category);
             context.SaveChanges();
-            return;
+            return RedirectToAction("getAll");
+        }
+
+
+        //delete category based to the passed id via the url 
+        public RedirectToActionResult deleteCategory(int id)
+        {
+            var category_to_be_deleted = context.categories.Find(id);
+            context.categories.Remove(category_to_be_deleted);
+            context.SaveChanges();
+
+            //in case after deletion i need to get all categories ( home page ) 
+            return RedirectToAction("getAll");
         }
     }
 }

@@ -7,9 +7,13 @@
 		@foreach (var category in Model)
 		{
 			<li>@category.id - @category.name</li>
+			<a href="/Categories/deleteCategory/@category.id">delete</a>
+			<a href="/Categories/getDetails/@category.id">details</a>
+
+			
 		}
 	 
 	</ul>
-
+	<a href="/Categories/createCategory">create new category</a>
 </body>
 </html>
