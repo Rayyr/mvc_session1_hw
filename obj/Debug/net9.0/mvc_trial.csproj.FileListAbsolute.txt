@@ -218,3 +218,4 @@ C:\mvc projects\mvc_trial\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Securi
 C:\mvc projects\mvc_trial\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\mvc projects\mvc_trial\obj\Debug\net9.0\mvc_trial.csproj.AssemblyReference.cache
 C:\mvc projects\mvc_trial\obj\Debug\net9.0\mvc_trial.csproj.Up2Date
+C:\mvc projects\mvc_trial\obj\Debug\net9.0\mvc_trial.sourcelink.json

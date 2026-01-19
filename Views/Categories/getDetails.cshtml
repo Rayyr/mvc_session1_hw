@@ -4,10 +4,12 @@
 
 	<h1>Read Action for Categories' details</h1>
 	<ul>
-		@foreach (var category in Model)
-		{
-			<li> category details : - @category.description</li>
-		}
+		 
+			<li> 
+				<h3>category name : @Model.name</h3>
+				<span>category details : @Model.description</span>
+			</li>
+		 
 
 	</ul>
 

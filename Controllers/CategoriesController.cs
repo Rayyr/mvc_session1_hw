@@ -16,11 +16,11 @@ namespace mvc_trial.Controllers
         }
 
 
-        //read details 
-        public ViewResult getDetails()
+        //read details for specific category 
+        public ViewResult getDetails(int id)
         {
-            var categories_details = context.categories.ToList();
-            return View("./Views/Categories/getDetails.cshtml", categories_details);
+            var category = context.categories.Find(id);
+            return View("./Views/Categories/getDetails.cshtml", category);
         }
     }
 }
